@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url('bacground.png'); background-color: rgba(255,255,255,0.9); background-blend-mode: lighten; background-size: cover;">
+    <div class="site-container">
+    <div class="gameboard">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+    <div class="input-area">
+        <div class="flexchild-box">Insert name for player1[X]:<input type="text" maxlength="26" id="insert-playername1"></div>
+        <div class="flexchild-box">Current player's round: <span id="current-player">[X]</span></div>
+        <div class="flexchild-box">Insert name for player2[O]:<input type="text" maxlength="26" id="insert-playername2"></div>
+    </div>
+    <button class="reset-button">Reset</button>
+    </div>
+    <div class='flex-this'><div class="result-display"></div></div>
+    <script src="app.js"></script>
+</body>
+</html>
