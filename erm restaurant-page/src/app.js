@@ -1,9 +1,13 @@
+
+import {fillmenu} from './menu.js';
+import { fillabout } from './about.js';
 import './styles.css';
 import food1 from './pexels-ash-craig-122861-376464.jpg';
 import food2 from './pexels-janetrangdoan-1099680.jpg';
 import food3 from './pexels-ella-olsson-572949-1640777.jpg';
 import food4 from './pexels-robinstickel-70497.jpg';
 const idcontent= document.querySelector("#content");
+function fillHomePage() {
 const MidSection= document.createElement("div");
 MidSection.classList.add("mid-section-contain");
 MidSection.innerHTML = `<div class="left-side">
@@ -23,7 +27,7 @@ idcontent.appendChild(MidSection);
 
 const telAddress= document.createElement("div");
 telAddress.classList.add("tel-address");
-telAddress.innerHTML= `Tel. +1 3052327673    Address. 659 Howell Fords, Lilamouth, KY 05698`;
+telAddress.innerHTML= `Num. +1 3052327673    Address. 659 Howell Fords, Lilamouth, KY 05698`;
 idcontent.appendChild(telAddress);
 
 const ImageContainer= document.createElement("div");
@@ -37,3 +41,21 @@ idcontent.appendChild(ImageContainer);
 const Footer= document.createElement("footer");
 Footer.innerHTML = `@Copyright, 2025.`;
 idcontent.appendChild(Footer);
+};
+
+const Menu = document.querySelector("#menu");
+const About = document.querySelector("#about");
+const Home = document.querySelector("#home");
+Menu.addEventListener('click', () => {
+    idcontent.innerHTML=``;
+    fillmenu();
+} );
+About.addEventListener('click', () => {
+    idcontent.innerHTML=``;
+   fillabout();
+} );
+Home.addEventListener('click', () => {
+idcontent.innerHTML=``;
+   fillHomePage();
+});
+fillHomePage();
